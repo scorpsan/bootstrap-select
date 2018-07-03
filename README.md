@@ -28,42 +28,28 @@ Add following code to your configuration file of application:
 
 ```php
 <?php
-use yii\bootstrap\Html;
-use yii\bootstrap\ActiveForm;
+...
 use phpnt\bootstrapSelect\BootstrapSelectAsset;
+...
 
 BootstrapSelectAsset::register($this);
-// теперь, все элементы, которые имеют класс selectpicker, будут стилизованными выпадающими списками
-// массив элементов
-$items = [
-    1 => 'Апельсин',
-    2 => 'Бочка',
-    3 => 'Велосипед',
-    4 => 'Гризли',
-    5 => 'Дом',
-    6 => 'Енот',
-    7 => 'Ежкина мать',
-    8 => 'Жигули',
-    9 => 'Зуб',
-    10 => 'Ирригация'
-];
-// Использование в активной форме
-$form = ActiveForm::begin();
+...
+
 echo $form->field($model, 'id')->dropDownList($items, [
     'class'  => 'form-control selectpicker',
     'data' => [
         'style' => 'btn-success',
-        'live-search' => 'false',
+        'live-search' => false,
         'size' => 7,
-        'title' => 'Ничего не выбрано'
+        'title' => 'Choose one...'
     ]]);
 echo $form->field($model, 'id')->dropDownList($items, [
     'class'  => 'form-control selectpicker',
     'data' => [
         'style' => 'btn-primary',
-        'live-search' => 'true',
+        'live-search' => true,
         'size' => 7,
-        'title' => 'Ничего не выбрано',
+        'title' => 'Choose one...',
     ],
 ]);
 echo $form->field($model, 'id')->dropDownList($items, [
@@ -75,26 +61,27 @@ echo $form->field($model, 'id')->dropDownList($items, [
         'size' => 7,
     ],
 ]);
-ActiveForm::end();
-// Использование без активной формы
+
 echo Html::dropDownList('item', null, $items, [
     'class'  => 'form-control selectpicker',
     'data' => [
         'style' => 'btn-info',
-        'live-search' => 'false',
+        'live-search' => false,
         'size' => 7,
-        'title' => 'Ничего не выбрано',
+        'title' => 'Choose one...',
     ]
 ]);
 echo Html::dropDownList('item', null, $items, [
     'class'  => 'form-control selectpicker',
     'data' => [
         'style' => 'btn-default',
-        'live-search' => 'true',
+        'live-search' => true,
         'size' => 7,
-        'title' => 'Ничего не выбрано',
+        'title' => 'Choose one...',
     ]
 ]);
+
+...
 ?>
 ```
 
