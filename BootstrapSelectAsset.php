@@ -5,21 +5,21 @@ use yii\web\AssetBundle;
 use Yii;
 
 class BootstrapSelectAsset extends AssetBundle {
-    /**
-     * @inherit
-     */
+
     public $sourcePath = '@bower/bootstrap-select';
-    /**
-     * @inherit
-     */
+
     public $css = [
         'dist/css/bootstrap-select.min.css',
     ];
-    /**
-     * @inherit
-     */
+
     public $js = [
         'dist/js/bootstrap-select.min.js',
+    ];
+
+    public $depends = [
+        'yii\web\JqueryAsset',
+        'yii\bootstrap\BootstrapAsset',
+        'yii\bootstrap\BootstrapPluginAsset'
     ];
 
     public function init() {
