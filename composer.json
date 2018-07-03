@@ -1,0 +1,23 @@
+{
+  "name": "scorpsan/bootstrap-select",
+  "description": "Yii2 Bootstrap Select Asset.",
+  "type": "yii2-extension",
+  "keywords": ["yii2","extension","bootstrap","select","bootstrap-select","widget"],
+  "license": "BSD-3-Clause",
+  "version": "1.0.0",
+  "authors": [
+    {
+      "name": "Dzmitry Saniuk",
+      "email": "dima.sanuk@gmail.com"
+    }
+  ],
+  "require": {
+    "yiisoft/yii2": "*",
+    "bower-asset/bootstrap-select": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "scorpsan\\bootstrapSelect\\": ""
+    }
+  }
+}
