@@ -40,17 +40,12 @@ class BootstrapSelectAsset extends AssetBundle {
                 ];
                 break;
         }
-        $this->registerJs();
-        parent::init();
-    }
-
-    protected function registerJs() {
-        $js =
-<<<SCRIPT
-    $('.selectpicker').selectpicker({});
-SCRIPT;
+        $js = "$('.selectpicker').selectpicker('render');";
+        //$js .= "$('.bootstrap-select').click(function () {";
+        //$js .= "$('.selectpicker').selectpicker('refresh');";
+        //$js .= "});";
         Yii::$app->view->registerJs($js);
-        return $this;
+        parent::init();
     }
 
 }
