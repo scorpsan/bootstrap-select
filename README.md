@@ -84,7 +84,3 @@ echo Html::dropDownList('item', null, $items, [
 ...
 ?>
 ```
-
-## License
-
-yii2-geoip is released under the BSD 3-Clause License.
